@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import { deleteMovie } from '../actions/movieActions';
+import { DELETE_MOVIE, deleteMovie } from '../actions/movieActions';
 import { useDispatch } from "react-redux";
 
 const Movie = (props) => {
@@ -16,7 +16,8 @@ const Movie = (props) => {
     if (e) {
       e.preventDefault();
     }
-    dispatch(deleteMovie(movie));
+    dispatch({type:DELETE_MOVIE,payload:movie.id},
+    push("/movies/"));
   }
   return (
     <div className="bg-white rounded-md shadow flex-1">
