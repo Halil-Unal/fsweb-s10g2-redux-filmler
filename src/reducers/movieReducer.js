@@ -6,7 +6,8 @@ const initialState = {
   appTitle: "IMDB Movie Database"
 }
 
-const reducer = (state, action) => {
+
+export default function memur(state = initialState, action) {
   switch (action.type) {
     case DELETE_MOVIE:
       return {
@@ -17,5 +18,3 @@ const reducer = (state, action) => {
       return state;
   }
 }
-
-export default reducer;

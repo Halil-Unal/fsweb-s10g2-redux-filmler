@@ -12,7 +12,9 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
   const displayFavorites = true;
-
+ 
+  
+ 
   return (
     <div>
       <nav className="bg-zinc-800 px-6 py-3">

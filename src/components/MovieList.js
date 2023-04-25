@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { useSelector, useDispatch } from "react-redux";
 import MovieListItem from './MovieListItem';
 import MovieFooter from './MovieFooter';
 
 const MovieList = (props) => {
-  const movies = [];
-
+  //const movies = [];
+  const movies = useSelector((store) => store.movies);
   return (
     <div className="flex-1">
       <div className="overflow-hidden bg-white rounded-md shadow mb-4 sm:min-h-[400px]">

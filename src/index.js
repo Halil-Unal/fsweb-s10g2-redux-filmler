@@ -9,11 +9,16 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers';
+import memur from './reducers/movieReducer.js';
 
+
+const depo = createStore(memur);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Provider store={depo}>
     <App />
+  </Provider>
   </BrowserRouter>
 );
 
