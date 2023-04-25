@@ -3,6 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { DELETE_MOVIE, deleteMovie } from '../actions/movieActions';
 import { useDispatch } from "react-redux";
 
+
 const Movie = (props) => {
   const { id } = useParams();
   const { push } = useHistory();

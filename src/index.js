@@ -12,7 +12,7 @@ import reducer from './reducers';
 import memur from './reducers/movieReducer.js';
 
 
-const depo = createStore(memur);
+const depo = createStore(reducer);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
