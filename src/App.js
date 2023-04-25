@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import MovieList from './components/MovieList';
 import Movie from './components/Movie';
-
+import movies from "./data";
 import MovieHeader from './components/MovieHeader';
 
 import AddMovieForm from './components/AddMovieForm';
@@ -32,7 +32,7 @@ const App = props => {
             </Route>
 
             <Route path="/movies/:id">
-              <Movie />
+              <Movie movies={movies}  />
             </Route>
 
             <Route path="/movies">

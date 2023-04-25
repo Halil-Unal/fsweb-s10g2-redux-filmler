@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 const MovieHeader = (props) => {
-  const appTitle = "";
+ // const appTitle = "";
   const displayFavorites = true;
-  const head = useSelector((store) => store.appTitle);
+  const  appTitle= useSelector((store) => store.appTitle);
   return (
     <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-3">
       <h2 className='text-zinc-600'>{appTitle}</h2>
